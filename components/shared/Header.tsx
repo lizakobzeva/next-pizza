@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import Container from "./Container";
 import React from "react";
-import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { ArrowRight, Pizza, ShoppingCart, User } from "lucide-react";
 
@@ -12,12 +11,11 @@ interface Props {
 const Header = ({ className }: Props) => {
   return (
     <header className={cn("border border-b", className)}>
-      <Container className="flex items-center justify-between py-8">
+      <Container className="flex items-center justify-between py-6">
         <div className="flex items-start gap-3">
-          {/* <Image src="/logo.png" alt="logo" width={35} height={35} /> */}
           <Pizza color="#f97316" strokeWidth={1.5} size="35px" />
           <div>
-            <h1 className="font-black text-2xl">NEXT PIZZA</h1>
+            <h1 className="font-black text-2xl uppercase">Sirius pizza</h1>
             <p className="text-sm text-gray-400">вкусней уже некуда</p>
           </div>
         </div>
