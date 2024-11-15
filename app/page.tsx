@@ -18,9 +18,9 @@ export default function Home() {
             <Filters />
           </div>
           <div className="flex-1">
-            <div className="flex flex-col gap-16">
+            <div className="flex flex-col gap-24">
               <ProductsGroupList
-                title={"Питцы"}
+                title={"Пиццы"}
                 items={[
                   {
                     id: "123",
@@ -50,6 +50,20 @@ export default function Home() {
                     imageUrl:
                       "https://media.dodostatic.net/image/r:292x292/11EE7D61706D472F9A5D71EB94149304.avif",
                   },
+                  {
+                    id: "645",
+                    name: "Диабло",
+                    price: 649,
+                    imageUrl:
+                      "https://media.dodostatic.net/image/r:292x292/11EE7D6149EB101D8727573088FA2EFF.avif",
+                  },
+                  {
+                    id: "986",
+                    name: "Двойная пепперони",
+                    price: 599,
+                    imageUrl:
+                      "https://media.dodostatic.net/image/r:292x292/11EF8537F2244E8CAEB7C69E644D0537.avif",
+                  },
                 ]}
                 categoryId={0}
               />
@@ -78,7 +92,41 @@ export default function Home() {
                       "https://media.dodostatic.net/image/r:292x292/11EEB0721E536EECA59C7BE93DC7E723.avif",
                   },
                 ]}
-                categoryId={0}
+                categoryId={1}
+              />
+              <ProductsGroupList
+                title={"Закуски"}
+                items={[
+                  {
+                    id: "fldsfk2",
+                    name: "Дэнвич ветчина и сыр",
+                    price: 269,
+                    imageUrl:
+                      "https://media.dodostatic.net/image/r:292x292/11EE796FF0059B799A17F57A9E64C725.avif",
+                  },
+                  {
+                    id: "fldsfk0",
+                    name: "Дэнвич чоризо барбекю",
+                    price: 269,
+                    imageUrl:
+                      "https://media.dodostatic.net/image/r:292x292/11EE796FF041FE1F94C903576DCFD01E.avif",
+                  },
+                  {
+                    id: "fl0dsfk2",
+                    name: "Супермясной Додстер",
+                    price: 259,
+                    imageUrl:
+                      "https://media.dodostatic.net/image/r:292x292/11EE797022F9AD72AC34E1B01DC6AEBA.avif",
+                  },
+                  {
+                    id: "fl0dsfkef",
+                    name: "Додстер с ветчиной",
+                    price: 249,
+                    imageUrl:
+                      "https://media.dodostatic.net/image/r:292x292/11EE7970259D888E98B6407EE6B994D9.avif",
+                  },
+                ]}
+                categoryId={2}
               />
             </div>
           </div>
