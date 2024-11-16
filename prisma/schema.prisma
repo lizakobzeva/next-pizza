@@ -11,15 +11,15 @@ model User{
     id  Int @id @default(autoincrement())
 
     fullName String 
-    email    String
+    email    String @unique
     password String
     role UserRole @default(USER)
+    verified Boolean @default(true)
 
     provider String?
     providerId String?
 
-    cart Cart @relation(fields: [cartid], references: [id])
-    cartid Int @unique @default(autoincrement())
+    cart Cart?
     orders Order[]
     verificationCode VerificationCode?
 
@@ -85,7 +85,8 @@ model Cart{
     totalAmount Int @default(0)
     token String?
 
-    user User? 
+    user User? @relation(fields: [userid], references: [id])
+    userid Int? @unique
     items CartItem[]
 
     createdAt DateTime @default(now())
