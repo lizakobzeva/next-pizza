@@ -3,6 +3,8 @@ import Container from "./Container";
 import React from "react";
 import { Button } from "../ui/button";
 import { ArrowRight, Pizza, ShoppingCart, User } from "lucide-react";
+import SearchInput from "./SearchInput";
+import Link from "next/link";
 
 interface Props {
   className?: string;
@@ -12,14 +14,17 @@ const Header = ({ className }: Props) => {
   return (
     <header className={cn("border border-b", className)}>
       <Container className="flex items-center justify-between py-6">
-        <div className="flex items-start gap-3">
+        <Link href={"/"} className="flex items-start gap-3">
           <Pizza color="#f97316" strokeWidth={1.5} size="35px" />
           <div>
             <h1 className="font-black text-2xl uppercase">Sirius pizza</h1>
             <p className="text-sm text-gray-400">вкусней уже некуда</p>
           </div>
+        </Link>
+
+        <div className="mx-10 flex-1 ">
+          <SearchInput />
         </div>
-        {/* <Input /> */}
         <div className="flex items-center gap-3">
           <Button variant="outline">
             <User size="16px" />
